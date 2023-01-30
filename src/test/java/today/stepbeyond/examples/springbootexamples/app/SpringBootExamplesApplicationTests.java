@@ -1,4 +1,4 @@
-package today.stepbeyond.examples.springbootexamples;
+package today.stepbeyond.examples.springbootexamples.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
