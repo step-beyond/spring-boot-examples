@@ -2,6 +2,8 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.8'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'jacoco'
+	id 'org.sonarqube' version '3.5.0.2730'
 }
 
 group = 'today.stepbeyond.examples'
@@ -20,4 +22,17 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+test {
+	finalizedBy jacocoTestReport
+}
+jacocoTestReport {
+	dependsOn test
+}
+
+jacocoTestReport {
+	reports {
+		xml.enabled true
+	}
 }
