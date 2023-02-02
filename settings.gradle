@@ -1,1 +1,5 @@
 rootProject.name = 'spring-boot-examples'
+
+include 'domain'
+include 'application'
+

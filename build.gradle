@@ -6,16 +6,31 @@ plugins {
 
 group = 'today.stepbeyond.examples'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
 
 repositories {
 	mavenCentral()
 }
 
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'io.spring.dependency-management'
+
+	group = 'today.stepbeyond.examples'
+	sourceCompatibility = '17'
+
+	repositories {
+		mavenCentral()
+	}
+
+	test {
+		useJUnitPlatform()
+	}
+
+	dependencyManagement {
+		imports {
+			mavenBom("org.springframework.boot:spring-boot-dependencies:2.7.8")
+		}
+	}
 }
 
 tasks.named('test') {
