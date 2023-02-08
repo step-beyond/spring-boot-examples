@@ -24,10 +24,10 @@ class KeyValueInMemoryRepositoryTest {
     void shouldNotCreateAlreadyExistingDog() {
         // GIVEN
         var pet = new Dog().setName("Hasso");
-        var uuidOfDog = objectUnderTest.create(pet);
+        var dog = objectUnderTest.create(pet);
 
         // WHEN, THEN
-        assertThatCode(() -> objectUnderTest.create(pet.setId(uuidOfDog)))
+        assertThatCode(() -> objectUnderTest.create(dog))
                 .isInstanceOf(IllegalArgumentException.class);
     }
 
@@ -37,8 +37,8 @@ class KeyValueInMemoryRepositoryTest {
         var pet = new Dog().setName("Hasso");
 
         // WHEN
-        var uuidOfDog = objectUnderTest.create(pet);
-        var foundDog = objectUnderTest.find(uuidOfDog);
+        var dog = objectUnderTest.create(pet);
+        var foundDog = objectUnderTest.find(dog.getId());
 
         // THEN
         assertThat(foundDog)

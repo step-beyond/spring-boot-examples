@@ -22,14 +22,22 @@ public class KeyValueInMemoryRepository implements PetRepository {
     }
 
     @Override
-    public UUID create(Pet pet) {
+    public Pet create(Pet pet) {
         if (store.containsKey(pet.getId())) {
             throw new IllegalArgumentException("Pet already exists");
         } else {
             var newPet = createNewPet(pet);
             store.put(newPet.getId(), newPet);
-            return newPet.getId();
+            return newPet;
         }
+    }
+
+    @Override
+    public Pet update(Pet pet) {
+        if (pet.getId() == null || !store.containsKey(pet.getId())) {
+            throw new IllegalArgumentException("Pet cannot be updated");
+        }
+        return store.put(pet.getId(), pet);
     }
 
     private static Pet createNewPet(Pet pet) {

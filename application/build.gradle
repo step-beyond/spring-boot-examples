@@ -4,6 +4,7 @@ plugins {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation project(':infrastructure-petstore-rest-client')
     implementation project(':domain')
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
