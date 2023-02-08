@@ -8,5 +8,7 @@ public interface PetRepository {
 
     Optional<Pet> find(UUID id);
 
-    UUID create(Pet newBornDog);
+    Pet create(Pet dog);
+
+    Pet update(Pet dog);
 }
