@@ -5,11 +5,11 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 import org.springframework.stereotype.Repository;
-import today.stepbeyond.examples.springbootexamples.domain.model.Cat;
-import today.stepbeyond.examples.springbootexamples.domain.model.Dog;
-import today.stepbeyond.examples.springbootexamples.domain.model.Pet;
-import today.stepbeyond.examples.springbootexamples.domain.model.PetType;
-import today.stepbeyond.examples.springbootexamples.infrastructure.repository.PetRepository;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.repository.PetRepository;
+import today.stepbeyond.examples.springbootexamples.domain.core.model.Cat;
+import today.stepbeyond.examples.springbootexamples.domain.core.model.Dog;
+import today.stepbeyond.examples.springbootexamples.domain.core.model.Pet;
+import today.stepbeyond.examples.springbootexamples.domain.core.model.PetType;
 
 @Repository
 public class KeyValueInMemoryRepository implements PetRepository {

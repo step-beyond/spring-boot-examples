@@ -1,7 +1,7 @@
-package today.stepbeyond.examples.springbootexamples.infrastructure.gateways.events;
+package today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.events;
 
-import today.stepbeyond.examples.springbootexamples.infrastructure.gateways.events.model.PetIsBornEvent;
-import today.stepbeyond.examples.springbootexamples.infrastructure.gateways.events.model.PetRegisteredEvent;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.events.model.PetIsBornEvent;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.events.model.PetRegisteredEvent;
 
 public interface PetEventPublisher {
 

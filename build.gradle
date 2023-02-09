@@ -39,6 +39,18 @@ subprojects {
 	apply plugin: 'org.sonarqube'
 	apply plugin: 'jacoco'
 
+
+	dependencyManagement {
+		imports {
+			mavenBom("org.springframework.boot:spring-boot-dependencies:2.7.8")
+			mavenBom("org.springframework.cloud:spring-cloud-dependencies:2021.0.5")
+		}
+		dependencies {
+			dependency 'com.tngtech.archunit:archunit:1.0.1'
+			dependency 'com.tngtech.archunit:archunit-junit5:1.0.1'
+		}
+	}
+
 	spotless {
 		enforceCheck(false)
 		ratchetFrom("origin/main")
@@ -76,12 +88,6 @@ subprojects {
 		useJUnitPlatform()
 	}
 
-	dependencyManagement {
-		imports {
-			mavenBom("org.springframework.boot:spring-boot-dependencies:2.7.8")
-			mavenBom("org.springframework.cloud:spring-cloud-dependencies:2021.0.5")
-		}
-	}
 }
 
 tasks.named('test') {

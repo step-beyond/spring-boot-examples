@@ -20,15 +20,15 @@ import org.springframework.jms.core.JmsTemplate;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.utility.DockerImageName;
-import today.stepbeyond.examples.springbootexamples.domain.model.Cat;
-import today.stepbeyond.examples.springbootexamples.domain.model.Dog;
-import today.stepbeyond.examples.springbootexamples.domain.model.Pet;
-import today.stepbeyond.examples.springbootexamples.infrastructure.gateways.events.PetEventPublisher;
-import today.stepbeyond.examples.springbootexamples.infrastructure.gateways.events.model.PetEvent;
-import today.stepbeyond.examples.springbootexamples.infrastructure.gateways.events.model.PetIsBornEvent;
-import today.stepbeyond.examples.springbootexamples.infrastructure.gateways.events.model.PetRegisteredEvent;
-import today.stepbeyond.examples.springbootexamples.infrastructure.repository.PetRepository;
-import today.stepbeyond.examples.springbootexamples.usecases.BirthOfADog;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.events.PetEventPublisher;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.events.model.PetEvent;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.events.model.PetIsBornEvent;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.events.model.PetRegisteredEvent;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.repository.PetRepository;
+import today.stepbeyond.examples.springbootexamples.domain.core.model.Cat;
+import today.stepbeyond.examples.springbootexamples.domain.core.model.Dog;
+import today.stepbeyond.examples.springbootexamples.domain.core.model.Pet;
+import today.stepbeyond.examples.springbootexamples.domain.usecases.BirthOfADog;
 import wiremock.org.eclipse.jetty.http.HttpHeader;
 
 @SpringBootTest(

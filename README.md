@@ -20,7 +20,7 @@ therefore the architectural concepts are not consistently followed.
 
 * [Feign - Declarative REST Client](https://cloud.spring.io/spring-cloud-netflix/multi/multi_spring-cloud-feign.html)
   * used to implement a REST client
-  * [Example](https://github.com/step-beyond/spring-boot-examples/blob/main/infrastructure-petstore-rest-client/src/main/java/today/stepbeyond/examples/springbootexamples/infrastructure/gateways/api/PetStoreApi.java)
+  * [Example](infrastructure-petstore-rest-client/src/main/java/today/stepbeyond/examples/springbootexamples/infrastructure/gateways/api/PetStoreApi.java)
 
 ### Testing Tools
 
@@ -31,10 +31,10 @@ Unit Tests follow the naming pattern "<TestName>Test".
 * [JUnit5](https://junit.org/junit5/docs/current/user-guide/)
 * [AssertJ](https://assertj.github.io/doc/) 
   * used to write fluent assertions
-  * [Example](https://github.com/step-beyond/spring-boot-examples/blob/main/domain/src/test/java/today/stepbeyond/examples/springbootexamples/usecases/DogUseCasesTest.java#L49-L51)
+  * [Example](domain/src/test/java/today/stepbeyond/examples/springbootexamples/domain/usecases/DogUseCasesTest.java#L49-L51)
 * [Mockito](https://site.mockito.org/)
   * used to mock dependencies to other services
-  * [Example](https://github.com/step-beyond/spring-boot-examples/blob/main/domain/src/test/java/today/stepbeyond/examples/springbootexamples/usecases/DogUseCasesTest.java)
+  * [Example](domain/src/test/java/today/stepbeyond/examples/springbootexamples/domain/usecases/DogUseCasesTest.java)
 
 #### Integration Tests
 
@@ -43,9 +43,13 @@ can be easily integrated into JUnit & SpringBoot.
 
 * [WireMock](https://wiremock.org/) 
   * used to test outgoing http requests
-  * [Example](https://github.com/step-beyond/spring-boot-examples/blob/main/infrastructure-petstore-rest-client/src/test/java/today/stepbeyond/examples/springbootexamples/infrastructure/gateways/PetStoreRestClientIT.java)
+  * [Example](infrastructure-petstore-rest-client/src/test/java/today/stepbeyond/examples/springbootexamples/infrastructure/gateways/PetStoreRestClientIT.java)
 * [Testcontainers](https://www.testcontainers.org/) 
   * used to start any type of external services, i.e. databases or message queues.
+  * [Example](infrastructure-pet-jms/src/test/java/today/stepbeyond/examples/springbootexamples/infrastructure/jms/pet/event/JmsPetEventPublisherIT.java)
+* [Awaitility](http://www.awaitility.org/)
+  * used to ensure a given state after a given time. Practical especially for asynchronous communications.
+  * [Example](application/src/test/java/today/stepbeyond/examples/springbootexamples/application/domain/BirthOfDogIT.java#L87-L94)
 
 #### Architectural Tests
 

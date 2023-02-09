@@ -1,15 +1,15 @@
-package today.stepbeyond.examples.springbootexamples.usecases;
+package today.stepbeyond.examples.springbootexamples.domain.usecases;
 
 import java.time.Instant;
 import java.util.Date;
 import org.springframework.stereotype.Service;
-import today.stepbeyond.examples.springbootexamples.domain.DogDomainService;
-import today.stepbeyond.examples.springbootexamples.domain.model.Dog;
-import today.stepbeyond.examples.springbootexamples.infrastructure.gateways.PetStoreClient;
-import today.stepbeyond.examples.springbootexamples.infrastructure.gateways.events.PetEventPublisher;
-import today.stepbeyond.examples.springbootexamples.infrastructure.gateways.events.model.PetIsBornEvent;
-import today.stepbeyond.examples.springbootexamples.infrastructure.gateways.events.model.PetRegisteredEvent;
-import today.stepbeyond.examples.springbootexamples.infrastructure.repository.PetRepository;
+import today.stepbeyond.examples.springbootexamples.domain.core.DogDomainService;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.PetStoreClient;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.events.PetEventPublisher;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.events.model.PetIsBornEvent;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.events.model.PetRegisteredEvent;
+import today.stepbeyond.examples.springbootexamples.domain.infrastructure.repository.PetRepository;
+import today.stepbeyond.examples.springbootexamples.domain.core.model.Dog;
 
 @Service
 public class DogUseCases implements BirthOfADog {
