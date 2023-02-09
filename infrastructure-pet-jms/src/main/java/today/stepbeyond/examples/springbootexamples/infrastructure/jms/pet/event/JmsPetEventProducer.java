@@ -20,7 +20,7 @@ public class JmsPetEventProducer implements PetEventPublisher {
 
   public JmsPetEventProducer(
       JmsTemplate jmsTemplate,
-      @Value("${app.pet.events.pet.destination}") String petIsBornDestination) {
+      @Value("${app.pet.events.destination}") String petIsBornDestination) {
     this.jmsTemplate = jmsTemplate;
     this.petIsBornDestination = petIsBornDestination;
   }
