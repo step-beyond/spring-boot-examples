@@ -42,9 +42,9 @@ public class KeyValueInMemoryRepository implements PetRepository {
 
     private static Pet createNewPet(Pet pet) {
         if (pet.isOfType(PetType.DOG)) {
-            return new Dog().setId(UUID.randomUUID()).setName(pet.getName());
+            return new Dog(UUID.randomUUID(), pet.getName(), pet.isRegistered());
         } else if (pet.isOfType(PetType.CAT)) {
-            return new Cat().setId(UUID.randomUUID()).setName(pet.getName());
+            return new Cat(UUID.randomUUID(), pet.getName(), pet.isRegistered());
         } else {
             throw new IllegalArgumentException("PetType is unknown.");
         }

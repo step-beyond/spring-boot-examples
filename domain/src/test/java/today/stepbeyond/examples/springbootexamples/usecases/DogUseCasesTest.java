@@ -39,19 +39,12 @@ class DogUseCasesTest {
         // GIVEN
         var dogName = "Hasso";
         var id = UUID.fromString("DF08B211-4D02-4FC1-910C-5803F1E42BD6");
-        var dog = new Dog().setName(dogName).setId(id);
         when(petStoreClient.registerPet(any()))
                 .thenReturn(true);
         when(petRepository.create(any()))
-                .thenReturn(new Dog()
-                        .setName(dogName)
-                        .setRegistered(false)
-                        .setId(id));
+                .thenReturn(new Dog(id, dogName, false));
         when(petRepository.update(any()))
-                .thenReturn(new Dog()
-                        .setName(dogName)
-                        .setRegistered(true)
-                        .setId(id));
+                .thenReturn(new Dog(id, dogName, true));
 
         // WHEN
         var newDog = objectUnderTest.birthOfADog(dogName);

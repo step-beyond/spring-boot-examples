@@ -2,11 +2,7 @@ package today.stepbeyond.examples.springbootexamples.domain.model;
 
 import java.util.UUID;
 
-public class Cat implements Pet {
-
-    private String name;
-
-    private UUID id;
+public record Cat(UUID id, String name, boolean registered) implements Pet {
 
     @Override
     public String getName() {
@@ -18,18 +14,13 @@ public class Cat implements Pet {
         return PetType.CAT;
     }
 
-    public Cat setName(String name) {
-        this.name = name;
-        return this;
+    @Override
+    public boolean isRegistered() {
+        return registered;
     }
 
     @Override
     public UUID getId() {
         return id;
-    }
-
-    public Cat setId(UUID id) {
-        this.id = id;
-        return this;
     }
 }

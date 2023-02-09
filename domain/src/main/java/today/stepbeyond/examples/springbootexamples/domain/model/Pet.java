@@ -10,6 +10,8 @@ public interface Pet {
 
     PetType getType();
 
+    boolean isRegistered();
+
     default boolean isOfType(PetType type) {
         return getType() == type;
     }
