@@ -35,10 +35,7 @@ class PetStoreRestClientIT {
     void shouldRegisterDog() {
         // GIVEN
         var uuid = UUID.fromString("66d0d3c4-7f78-4106-84ad-71691ba6d7d6");
-        var dog = new Dog()
-                .setName("Hasso")
-                .setId(uuid)
-                .setRegistered(false);
+        var dog = new Dog(uuid, "Hasso", false);
 
         WireMock.stubFor(post("/registrations").withRequestBody(equalTo("{\"petId\":\"66d0d3c4-7f78-4106-84ad-71691ba6d7d6\"}"))
                 .willReturn(
@@ -55,10 +52,7 @@ class PetStoreRestClientIT {
     void shouldNotRegisterDog() {
         // GIVEN
         var uuid = UUID.fromString("66d0d3c4-7f78-4106-84ad-71691ba6d7d6");
-        var dog = new Dog()
-                .setName("Hasso")
-                .setId(uuid)
-                .setRegistered(false);
+        var dog = new Dog(uuid, "Hasso", false);
 
         WireMock.stubFor(post("/registrations").withRequestBody(equalTo("{\"petId\":\"66d0d3c4-7f78-4106-84ad-71691ba6d7d6\"}"))
                 .willReturn(ResponseDefinitionBuilder.responseDefinition().withStatus(422)));

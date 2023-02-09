@@ -27,10 +27,7 @@ class DogDomainServiceTest {
     @Test
     void shouldRegisterDog() {
         // GIVEN
-        var dog = new Dog()
-                .setName("Hasso")
-                .setId(UUID.fromString("9AD0236E-43A7-40C7-9FF1-54FEE4D23D84"))
-                .setRegistered(false);
+        var dog = new Dog(UUID.fromString("9AD0236E-43A7-40C7-9FF1-54FEE4D23D84"), "Hasso", false);
 
         // WHEN
         var result = objectUnderTest.registerDog(dog);

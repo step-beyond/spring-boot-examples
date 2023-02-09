@@ -26,9 +26,10 @@ class PetStoreRestClientTest {
     @Test
     void shouldRegisterPet() {
         // GIVEN
-        var dog = new Dog().setName("Hasso")
-                .setRegistered(false)
-                .setId(UUID.fromString("9AD0236E-43A7-40C7-9FF1-54FEE4D23D84"));
+        var dog = new Dog(
+                UUID.fromString("9AD0236E-43A7-40C7-9FF1-54FEE4D23D84"),
+                "Hasso",
+                false);
         when(api.registerPet(any())).thenReturn(ResponseEntity.ok(null));
 
         // WHEN

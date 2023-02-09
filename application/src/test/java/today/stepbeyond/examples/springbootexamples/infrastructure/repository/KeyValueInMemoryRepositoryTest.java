@@ -23,7 +23,7 @@ class KeyValueInMemoryRepositoryTest {
     @Test
     void shouldNotCreateAlreadyExistingDog() {
         // GIVEN
-        var pet = new Dog().setName("Hasso");
+        var pet = new Dog(null, "Hasso", false);
         var dog = objectUnderTest.create(pet);
 
         // WHEN, THEN
@@ -34,7 +34,7 @@ class KeyValueInMemoryRepositoryTest {
     @Test
     void shouldStoreAndFindDog() {
         // GIVEN
-        var pet = new Dog().setName("Hasso");
+        var pet = new Dog(null, "Hasso", false);
 
         // WHEN
         var dog = objectUnderTest.create(pet);

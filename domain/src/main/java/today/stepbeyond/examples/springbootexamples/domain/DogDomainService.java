@@ -7,15 +7,10 @@ import today.stepbeyond.examples.springbootexamples.domain.model.Dog;
 public class DogDomainService {
 
     public Dog createDog(String name) {
-        return new Dog()
-                .setName(name)
-                .setRegistered(false);
+        return new Dog(null, name, false);
     }
 
     public Dog registerDog(Dog dog) {
-        return new Dog()
-                .setId(dog.getId())
-                .setName(dog.getName())
-                .setRegistered(true);
+        return new Dog(dog.id(), dog.name(), true);
     }
 }
