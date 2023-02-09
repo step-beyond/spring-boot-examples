@@ -1,4 +1,4 @@
-package today.stepbeyond.examples.springbootexamples.infrastructure.gateways.events.model;
+package today.stepbeyond.examples.springbootexamples.domain.infrastructure.gateways.events.model;
 
 import java.util.Date;
 

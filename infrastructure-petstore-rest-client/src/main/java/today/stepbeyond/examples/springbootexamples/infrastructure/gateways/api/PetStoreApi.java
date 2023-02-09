@@ -1,6 +1,5 @@
 package today.stepbeyond.examples.springbootexamples.infrastructure.gateways.api;
 
-
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -10,9 +9,9 @@ import today.stepbeyond.examples.springbootexamples.infrastructure.gateways.api.
 @FeignClient(name = "petStoreApi", url = "${petStoreApi.url}")
 public interface PetStoreApi {
 
-    @PostMapping(
-            path = "registrations",
-            produces = MediaType.APPLICATION_JSON_VALUE,
-            consumes = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<Void> registerPet(RegistrationRequest registrationRequest);
+  @PostMapping(
+      path = "registrations",
+      produces = MediaType.APPLICATION_JSON_VALUE,
+      consumes = MediaType.APPLICATION_JSON_VALUE)
+  ResponseEntity<Void> registerPet(RegistrationRequest registrationRequest);
 }
