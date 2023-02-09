@@ -1,0 +1,8 @@
+dependencies {
+	implementation project(':domain')
+	api 'org.springframework.boot:spring-boot-starter-activemq'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.apache.activemq:artemis-jms-server'
+}

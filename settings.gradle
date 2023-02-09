@@ -3,4 +3,4 @@ rootProject.name = 'spring-boot-examples'
 include 'domain'
 include 'application'
 include 'infrastructure-petstore-rest-client'
-
+include 'infrastructure-pet-jms'
