@@ -31,7 +31,7 @@ Unit Tests follow the naming pattern "<TestName>Test".
 * [JUnit5](https://junit.org/junit5/docs/current/user-guide/)
 * [AssertJ](https://assertj.github.io/doc/) 
   * used to write fluent assertions
-  * [Example](https://github.com/step-beyond/spring-boot-examples/blob/main/domain/src/test/java/today/stepbeyond/examples/springbootexamples/usecases/DogUseCasesTest.java#L53-L55)
+  * [Example](https://github.com/step-beyond/spring-boot-examples/blob/main/domain/src/test/java/today/stepbeyond/examples/springbootexamples/usecases/DogUseCasesTest.java#L49-L51)
 * [Mockito](https://site.mockito.org/)
   * used to mock dependencies to other services
   * [Example](https://github.com/step-beyond/spring-boot-examples/blob/main/domain/src/test/java/today/stepbeyond/examples/springbootexamples/usecases/DogUseCasesTest.java)
@@ -46,6 +46,12 @@ can be easily integrated into JUnit & SpringBoot.
   * [Example](https://github.com/step-beyond/spring-boot-examples/blob/main/infrastructure-petstore-rest-client/src/test/java/today/stepbeyond/examples/springbootexamples/infrastructure/gateways/PetStoreRestClientIT.java)
 * [Testcontainers](https://www.testcontainers.org/) 
   * used to start any type of external services, i.e. databases or message queues.
+
+#### Architectural Tests
+
+* [ArchUnit](https://github.com/TNG/ArchUnit/tree/main)
+  * used to enforce a defined architecture patterns, conventions and much more
+  * [Example](https://github.com/step-beyond/spring-boot-examples/blob/main/infrastructure-petstore-rest-client/src/test/java/today/stepbeyond/examples/springbootexamples/ArchitecturalTest.java)
 
 #### Conventions
 
