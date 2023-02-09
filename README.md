@@ -1,5 +1,7 @@
 # Spring Boot Example Repository
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=step-beyond_spring-boot-examples&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=step-beyond_spring-boot-examples)
+
 This repository contains a bunch of examples of how to deal with common 
 technical challenges, which developers face frequently, when implementing services 
 with SpringBoot.
