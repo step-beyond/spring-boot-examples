@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  springbootexample:
+    image: spring-boot-examples:latest
+    environment:
+      LOGGING_LEVEL_ROOT: "INFO"
+      SPRING_ARTEMIS_BROKER_URL: tcp://localhost:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+      SPRING_ARTEMIS_USER: admin
+      SPRING_ARTEMIS_PASSWORD: admin
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    restart: always
+  activemq:
+    image: rmohr/activemq:latest
+    ports:
+      - "61616:61616"
+      - "8161:8161"
+    volumes:
+      - "activemq-data:/etc/activemq/conf"
+      - "activemq-data:/var/lib/activemq/data"
+      - "activemq-data:/opt/activemq/conf"
+      - "activemq-data:/opt/activemq/data"
+volumes:
+  activemq-data: {}
