@@ -41,3 +41,4 @@ tasks.named('check') {
 test {
 	finalizedBy testCodeCoverageReport // report is always generated after tests run
 }
+
