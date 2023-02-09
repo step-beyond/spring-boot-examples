@@ -14,15 +14,23 @@ repositories {
 	mavenCentral()
 }
 
+
+
+jacocoTestReport {
+	reports {
+		xml.enabled true
+	}
+}
+
 sonarqube {
 	properties {
 		property "sonar.projectKey", "step-beyond_spring-boot-examples"
 		property "sonar.organization", "step-beyond"
 		property "sonar.host.url", "https://sonarcloud.io"
-		property "sonar.coverage.jacoco.xmlReportPaths", "application/build/reports/jacoco/testCodeCoverageReport/testCodeCoverageReport.xml"
+		property "sonar.pullrequest.github.summary_comment", "true"
+		property "sonar.coverage.jacoco.xmlReportPaths", "${project.rootDir}/application/build/reports/jacoco/testCodeCoverageReport/testCodeCoverageReport.xml"
 	}
 }
-
 
 subprojects {
 	apply plugin: 'java-library'
