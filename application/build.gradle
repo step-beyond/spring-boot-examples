@@ -20,6 +20,8 @@ dependencies {
 	testImplementation 'org.springframework.cloud:spring-cloud-contract-wiremock'
 	testImplementation "org.testcontainers:testcontainers:${testcontainersVersion}"
 	testImplementation "org.testcontainers:junit-jupiter:${testcontainersVersion}"
+	testImplementation 'com.tngtech.archunit:archunit'
+	testImplementation 'com.tngtech.archunit:archunit-junit5'
 
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 }
