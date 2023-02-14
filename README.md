@@ -46,7 +46,7 @@ can be easily integrated into JUnit & SpringBoot.
   * [Example](infrastructure-petstore-rest-client/src/test/java/today/stepbeyond/examples/springbootexamples/infrastructure/gateways/PetStoreRestClientIT.java)
 * [Testcontainers](https://www.testcontainers.org/) 
   * used to start any type of external services, i.e. databases or message queues.
-  * [Example](infrastructure-pet-jms/src/test/java/today/stepbeyond/examples/springbootexamples/infrastructure/jms/pet/event/JmsPetEventPublisherIT.java)
+  * [Example](application/src/test/java/today/stepbeyond/examples/springbootexamples/application/domain/BirthOfDogIT.java#L40-L42)
 * [Awaitility](http://www.awaitility.org/)
   * used to ensure a given state after a given time. Practical especially for asynchronous communications.
   * [Example](application/src/test/java/today/stepbeyond/examples/springbootexamples/application/domain/BirthOfDogIT.java#L87-L94)
