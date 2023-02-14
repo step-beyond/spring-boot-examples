@@ -40,7 +40,7 @@ Unit Tests follow the naming pattern "<TestName>Test".
 * [JUnit5](https://junit.org/junit5/docs/current/user-guide/)
 * [AssertJ](https://assertj.github.io/doc/) 
   * used to write fluent assertions
-  * [Example](domain/src/test/java/today/stepbeyond/examples/springbootexamples/domain/usecases/DogUseCasesTest.java#L49-L51)
+  * [Example](domain/src/test/java/today/stepbeyond/examples/springbootexamples/domain/usecases/DogUseCasesTest.java#L74-L76)
 * [Mockito](https://site.mockito.org/)
   * used to mock dependencies to other services
   * [Example](domain/src/test/java/today/stepbeyond/examples/springbootexamples/domain/usecases/DogUseCasesTest.java)
@@ -64,7 +64,7 @@ can be easily integrated into JUnit & SpringBoot.
 
 * [ArchUnit](https://github.com/TNG/ArchUnit/tree/main)
   * used to enforce a defined architecture patterns, conventions and much more
-  * [Example](https://github.com/step-beyond/spring-boot-examples/blob/main/infrastructure-petstore-rest-client/src/test/java/today/stepbeyond/examples/springbootexamples/ArchitecturalTest.java)
+  * [Example](domain/src/test/java/today/stepbeyond/examples/springbootexamples/domain/ArchitecturalTest.java)
 
 ### Deployment Tools
 
