@@ -21,5 +21,12 @@ services:
       - "activemq-data:/var/lib/activemq/data"
       - "activemq-data:/opt/activemq/conf"
       - "activemq-data:/opt/activemq/data"
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      # port used by applications
+      - "5672:5672"
+      # use username "guest" and password "guest"
+      - "15672:15672"
 volumes:
   activemq-data: {}

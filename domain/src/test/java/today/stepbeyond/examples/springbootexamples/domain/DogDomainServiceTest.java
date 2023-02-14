@@ -38,4 +38,18 @@ class DogDomainServiceTest {
         .extracting(Dog::getName, Dog::isRegistered, Dog::getId)
         .contains("Hasso", true, UUID.fromString("9AD0236E-43A7-40C7-9FF1-54FEE4D23D84"));
   }
+
+  @Test
+  void shouldDeregisterDog() {
+    // GIVEN
+    var dog = new Dog(UUID.fromString("9AD0236E-43A7-40C7-9FF1-54FEE4D23D84"), "Hasso", true);
+
+    // WHEN
+    var result = objectUnderTest.deregisterDog(dog);
+
+    // THEN
+    assertThat(result)
+        .extracting(Dog::getName, Dog::isRegistered, Dog::getId)
+        .contains("Hasso", false, UUID.fromString("9AD0236E-43A7-40C7-9FF1-54FEE4D23D84"));
+  }
 }

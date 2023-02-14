@@ -1,0 +1,15 @@
+dependencies {
+	implementation "org.springframework.boot:spring-boot-starter-amqp"
+	implementation project(':domain')
+
+	testImplementation 'org.assertj:assertj-core'
+	testImplementation 'org.junit.jupiter:junit-jupiter'
+	testImplementation 'org.mockito:mockito-junit-jupiter'
+	testImplementation 'org.mockito:mockito-core'
+	testImplementation "org.testcontainers:rabbitmq:1.17.6"
+	testImplementation "org.testcontainers:testcontainers:1.17.6"
+	testImplementation "org.testcontainers:junit-jupiter:1.17.6"
+	testImplementation 'org.awaitility:awaitility:4.2.0'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-web'
+}
