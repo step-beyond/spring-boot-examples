@@ -13,6 +13,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation project(':infrastructure-petstore-rest-client')
 	implementation project(':infrastructure-pet-jms')
+	implementation project(':infrastructure-pet-registration-rabbitmq-listener')
 	implementation project(':domain')
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -43,4 +44,3 @@ tasks.named('check') {
 test {
 	finalizedBy testCodeCoverageReport // report is always generated after tests run
 }
-

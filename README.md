@@ -22,6 +22,15 @@ therefore the architectural concepts are not consistently followed.
   * used to implement a REST client
   * [Example](infrastructure-petstore-rest-client/src/main/java/today/stepbeyond/examples/springbootexamples/infrastructure/gateways/api/PetStoreApi.java)
 
+#### Messaging
+
+* [RabbitMQ](https://www.rabbitmq.com/)
+  * Listener [Example](infrastructure-pet-registration-rabbitmq-listener/src/main/java/today/stepbeyond/examples/springbootxamples/infrastructure/rabbitmq/RabbitMqListener.java)
+  * Integration tested with [Testcontainers](infrastructure-pet-registration-rabbitmq-listener/src/test/java/today/stepbeyond/examples/springbootxamples/infrastructure/rabbitmq/RabbitMqListenerIT.java)
+* [JMS - ActiveMQ](https://activemq.apache.org/)
+  * Producer [Example](infrastructure-pet-jms/src/main/java/today/stepbeyond/examples/springbootexamples/infrastructure/jms/pet/event/JmsPetEventPublisher.java)
+  * Integration test with [Testcontainers](application/src/test/java/today/stepbeyond/examples/springbootexamples/application/domain/BirthOfDogIT.java)
+
 ### Testing Tools
 
 #### Unit Tests
@@ -56,6 +65,15 @@ can be easily integrated into JUnit & SpringBoot.
 * [ArchUnit](https://github.com/TNG/ArchUnit/tree/main)
   * used to enforce a defined architecture patterns, conventions and much more
   * [Example](https://github.com/step-beyond/spring-boot-examples/blob/main/infrastructure-petstore-rest-client/src/test/java/today/stepbeyond/examples/springbootexamples/ArchitecturalTest.java)
+
+### Deployment Tools
+
+* [jib](https://github.com/GoogleContainerTools/jib/)
+  * used to build an image without a Docker daemon
+  * [Example](application/build.gradle#L31-38)
+* [Docker Compose](https://docs.docker.com/compose/)
+  * used to start the service together with the surrounding infrastructure, i.e. message broker, databases, etc.
+  * [Example](docker-compose.yml)
 
 #### Conventions
 

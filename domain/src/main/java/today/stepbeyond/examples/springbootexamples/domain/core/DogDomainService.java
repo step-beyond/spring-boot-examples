@@ -13,4 +13,8 @@ public class DogDomainService {
   public Dog registerDog(Dog dog) {
     return new Dog(dog.id(), dog.name(), true);
   }
+
+  public Dog deregisterDog(Dog dog) {
+    return new Dog(dog.id(), dog.name(), false);
+  }
 }
