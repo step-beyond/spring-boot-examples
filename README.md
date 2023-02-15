@@ -76,6 +76,9 @@ can be easily integrated into JUnit & SpringBoot.
 * [Docker Compose](https://docs.docker.com/compose/)
   * used to start the service together with the surrounding infrastructure, i.e. message broker, databases, etc.
   * [Example](docker-compose.yml)
+* [Semantic Release](https://github.com/semantic-release/semantic-release)
+  * used to create releases based on semantic versioning. With the conventional commits, the proper release version (MAJOR.MINOR.PATCH)
+    will be resolved.
 
 #### Conventions
 
