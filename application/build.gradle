@@ -31,7 +31,7 @@ dependencies {
 jib {
 	container.ports = ['8080']
 	container.args = []
-	from.image = 'eclipse-temurin:17'
+	from.image = 'gcr.io/distroless/java17'
 	container.user = 1001
 	to.image = "$rootProject.name:latest"
 	allowInsecureRegistries = false
