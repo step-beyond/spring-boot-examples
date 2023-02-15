@@ -1,6 +1,8 @@
 # Spring Boot Example Repository
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=step-beyond_spring-boot-examples&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=step-beyond_spring-boot-examples)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=step-beyond_spring-boot-examples&metric=coverage)](https://sonarcloud.io/summary/new_code?id=step-beyond_spring-boot-examples)
+[![Java CI](https://github.com/step-beyond/spring-boot-examples/actions/workflows/build.yaml/badge.svg)](https://github.com/step-beyond/spring-boot-examples/actions/workflows/build.yaml)
 
 This repository contains a bunch of examples of how to deal with common 
 technical challenges, which developers face frequently, when implementing services 
@@ -82,4 +84,8 @@ can be easily integrated into JUnit & SpringBoot.
 
 #### Conventions
 
-This repository follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/) 
+* This repository follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.4/)
+* [Distroless container images](https://github.com/GoogleContainerTools/distroless) contain only your
+  application and its runtime dependencies. They do not contain package managers, shells or any other
+  programs you would expect to find in a standard Linux distribution.
+  * [Example in Jib](application/build.gradle#L34) 
