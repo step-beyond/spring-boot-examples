@@ -64,7 +64,9 @@ can be easily integrated into JUnit & SpringBoot.
 
 * [ArchUnit](https://github.com/TNG/ArchUnit/tree/main)
   * used to enforce a defined architecture patterns, conventions and much more
-  * [Example](domain/src/test/java/today/stepbeyond/examples/springbootexamples/domain/ArchitecturalTest.java)
+  * Examples:
+    * [Modul constraints](domain/src/test/java/today/stepbeyond/examples/springbootexamples/domain/ArchitecturalTest.java)
+    * [Architecture application tests](application/src/test/java/today/stepbeyond/examples/springbootexamples/ArchTests.java)
 
 ### Deployment Tools
 
