@@ -1,0 +1,32 @@
+# This workflow builds, tests, and releases the modules.
+name: Publish Release to Github Packages
+on:
+  release:
+    types: [published, released]
+
+env:
+  SEMANTIC_VERSION: ${{ github.event.release.tag_name }}
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+jobs:
+  # build
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 17
+          cache: 'gradle'
+      - name: Build Jib
+        run: |
+          ./gradlew jib \
+          -Djib.to.image=$REGISTRY/$IMAGE_NAME:$SEMANTIC_VERSION \
+          -Djib.to.auth.username=${{ github.actor }} \
+          -Djib.to.auth.password=${{ secrets.GITHUB_TOKEN }}
