@@ -43,7 +43,7 @@ Unit Tests follow the naming pattern "<TestName>Test".
 * [AssertJ](https://assertj.github.io/doc/) 
   * used to write fluent assertions
   * [Example](domain/src/test/java/today/stepbeyond/examples/springbootexamples/domain/usecases/DogUseCasesTest.java#L74-L76)
-  * [Example](application/src/test/java/today/stepbeyond/examples/springbootexamples/application/domain/BirthOfDogIT.java#L69-L83) for soft assertions. Soft assertions are useful, when multiple assertions are within one test. With soft assertions you can disable the default fail fast behavior.
+  * [Example](application/src/test/java/today/stepbeyond/examples/springbootexamples/application/domain/BirthOfDogIT.java#L69-L83) for soft assertions. Soft assertions are useful, when multiple assertions are examined in one test. With soft assertions you can disable the default fail fast behavior.
 * [Mockito](https://site.mockito.org/)
   * used to mock dependencies to other services
   * [Example](domain/src/test/java/today/stepbeyond/examples/springbootexamples/domain/usecases/DogUseCasesTest.java)
