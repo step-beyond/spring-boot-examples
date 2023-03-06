@@ -5,4 +5,4 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource(value = "classpath:petstore-client-defaults.properties")
-public class PetStoreRestConfiguration { }
+public class PetStoreRestConfiguration {}
