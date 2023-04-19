@@ -6,7 +6,7 @@ dependencies {
 	testImplementation 'org.junit.jupiter:junit-jupiter'
 	testImplementation 'org.mockito:mockito-junit-jupiter'
 	testImplementation 'org.mockito:mockito-core'
-	testImplementation "org.testcontainers:rabbitmq:1.17.6"
+	testImplementation "org.testcontainers:rabbitmq:1.18.0"
 	testImplementation "org.testcontainers:testcontainers:1.17.6"
 	testImplementation "org.testcontainers:junit-jupiter:1.17.6"
 	testImplementation 'org.awaitility:awaitility:4.2.0'
