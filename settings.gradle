@@ -5,4 +5,5 @@ include 'application'
 include 'infrastructure-petstore-rest-client'
 include 'infrastructure-pet-jms'
 include 'infrastructure-pet-registration-rabbitmq-listener'
+include 'testing'
 
