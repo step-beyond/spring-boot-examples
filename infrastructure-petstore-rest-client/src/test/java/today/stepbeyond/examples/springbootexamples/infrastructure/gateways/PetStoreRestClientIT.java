@@ -66,4 +66,5 @@ class PetStoreRestClientIT {
     // THEN
     assertThat(result).isFalse();
   }
+  
 }
