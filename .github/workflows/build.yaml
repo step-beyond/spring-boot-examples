@@ -29,7 +29,7 @@ jobs:
           key: ${{ runner.os }}-sonar
           restore-keys: ${{ runner.os }}-sonar
       - name: Validate Gradle wrapper
-        uses: gradle/wrapper-validation-action@dabb1b52d35733fde278c288e4781d4336d4c29c
+        uses: gradle/wrapper-validation-action@b231772637bb498f11fdbc86052b6e8a8dc9fc92
       - name: Test with Gradle
         uses: gradle/gradle-build-action@59d37bdb619feb5c23a98c4eb6df30c36b64d88c
         with:
