@@ -9,5 +9,7 @@ jobs:
     steps:
       - name: Test Bruno 
         uses: step-beyond/bruno-action@1.0.2
+        with:
+          directory: ./tests
       
       
