@@ -1,0 +1,25 @@
+plugins {
+    id "com.google.protobuf" version "0.9.2"
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-rsocket"
+    implementation 'com.google.protobuf:protobuf-java:3.22.2'
+    implementation project(':domain')
+
+    testImplementation 'org.assertj:assertj-core'
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.mockito:mockito-junit-jupiter'
+    testImplementation 'org.mockito:mockito-core'
+    testImplementation 'org.awaitility:awaitility:4.2.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+protobuf {
+    protoc {
+        // The artifact spec for the Protobuf Compiler
+        artifact = 'com.google.protobuf:protoc:3.22.2'
+    }
+    generateProtoTasks {}
+}

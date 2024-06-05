@@ -1,0 +1,19 @@
+syntax = "proto3";
+package today.stepbeyond.examples.proto;
+option java_multiple_files = true;
+
+
+message PetRegistrationRequest {
+  string name = 1;
+}
+
+message PetRegistrationResponse {
+  string name = 1;
+  ResponseStatus status = 2;
+}
+
+enum ResponseStatus {
+  RECEIVED = 0;
+  PROCESSING = 1;
+  REGISTERED = 2;
+}
