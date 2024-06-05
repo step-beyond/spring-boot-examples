@@ -8,8 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test Bruno 
-        uses: step-beyond/bruno-action@1.0.12
+        uses: step-beyond/bruno-action@1.0.13
         with:
           directory: ./tests
+          output-type: pr
       
       
