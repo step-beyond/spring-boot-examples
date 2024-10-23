@@ -5,7 +5,7 @@ plugins {
 }
 
 ext {
-	set("testcontainersVersion", "1.17.6")
+	set("testcontainersVersion", "1.20.3")
 }
 
 dependencies {
